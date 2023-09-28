@@ -33,6 +33,7 @@ html, body {
     width: 100%;
     background-color: rgb(255, 255, 255);
     margin-top: 1vw;
+    position: relative;
     
 }
 
@@ -41,5 +42,15 @@ html, body {
     background-color: rgb(255, 255, 255);
     padding-bottom: 2vh;
     
-    
+}
+
+#video-container img {
+    padding: 1.2vw;
+    max-width: 5vw;
+    background-color: black;
+    position: fixed;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+
 }
