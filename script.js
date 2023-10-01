@@ -1,3 +1,17 @@
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
+
+function cursor(){
+    document.addEventListener("mousemove",function(dets){
+        gsap.to("#cursor",{
+            left:dets.x,
+            top:dets.y
+        })
+    })
+}
+
 function playvideo(){
     var videocon = document.querySelector('#video-container')
 var playlogo = document.querySelector("#playlogo")
@@ -18,11 +32,11 @@ videocon.addEventListener("mouseleave",function(){
 
 videocon.addEventListener("mousemove",function(dets){
     gsap.to(playlogo,{
-        left:dets.x-100,
-        top:dets.y-200
+        left:dets.x-20,
+        top:dets.y-25
     })
 })
-}
+} //main video in home page
 
 function h1_ani(){
     gsap.from("#page1 h1",{
@@ -40,5 +54,10 @@ function h1_ani(){
     })
 }
 
+
+
+
 playvideo()
 h1_ani()
+cursor()
+

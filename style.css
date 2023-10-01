@@ -13,13 +13,74 @@ html, body {
     width: 100%;
 }
 
-#page1{
-    min-height: 100vh;
+#nav {
+    background-color: rgba(255, 255, 255, 0);
+    height: 8vh;
     width: 100%;
-    background-color: rgb(166, 193, 14);
+    padding: 5vh 2.5vw;
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav img{
+    height: 4vh;
+}
+
+#nav #nav02{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+}
+
+#nav02 a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5vh;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#nav #icon{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 10vw;
+
+}
+
+#nav #icon .ri-menu-3-line{
+    font-size: 3vh;
+    
+}
+#nav #icon .ri-account-circle-line{
+    font-size: 3.5vh;
+}
+
+
+#cursor {
+    height: 12vw;
+    width: 12vw;
+    background-color: aqua;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%) scale(0);
+}
+
+#page1{
+    min-height: 60vh;
+    width: 100%;
     position: relative;
-    padding: 0 1vw;
+    padding: 0 2vw;
     padding-top: 20vh;
+    background-color: rgb(38, 197, 197);
     
 
 }
@@ -29,13 +90,14 @@ html, body {
     font-family: "Montserrat";
     font-weight: 900;
     line-height: 12vw;
-    background-color: aquamarine;
+    background-color: rgba(0, 0, 0, 0);
+    color:rgba(0, 0, 0);
 
 }
 
 #video-container{
     width: 100%;
-    background-color: rgb(121, 10, 10);
+    background-color:rgba(255, 255, 255, 0);
     margin-top: 1vw;
     position: relative;
     padding-bottom: 2vh;
@@ -44,35 +106,150 @@ html, body {
 
 #video-container video{
     width: 100%;
-    background-color: rgb(98, 9, 200);
+    background-color: rgb(255, 255, 255);
     
     
 }
 
 #video-container img {
-    padding: 1.2vw;
+    padding: 0.4vw;
     max-width: 5vw;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     border-radius: 50%;
     opacity: 0;
     scale: 0;
-
 }
 
 #page2{
     height: 100vh;
     width: 100%;
-    background-color: aqua;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 2vh 0vw;
+    padding: 6vh 1vw;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
 }
+
 
 #page2 .elem{
     height: 100%;
     width: 31%;
-    background-color: brown;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    align-items:end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.elem .dets{
+    color: aliceblue;
+    width: 100%;
+    border-radius: 25px;
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(233, 16, 16, 0);
+    bottom: 60%;
+    
+}
+
+.elem .dets .st{
+    font-family: "Montserrat";
+    font-weight: 900;
+    font-size: 4vw;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+
+#st1{
+    color: rgb(232, 227, 190);
+}
+#st2{
+    color: rgb(255, 196, 0);
+}
+#st3{
+    color: rgb(179, 0, 255);
+}
+
+
+.elem .showcase {
+    position: absolute;
+    z-index: 4;
+
+}
+
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+
+
+
+
+
+
+
+@media (max-width:600px){
+
+#page1{
+    min-height: 50vh;
+    width: 100%;
+    padding: 0 3vw;
+    padding-top: 20vh;
+}    
+
+#page1 h1{
+    font-size: 13vw;
+}
+
+#video-container img {
+    height: 30%;
+    max-width: 50vw;
+    position: absolute;
+    opacity: 1;
+    scale: 1;
+    transform: translate(-50%,-50%);
+    top: 20%;
+    left: 91%;
+    border-top-right-radius: 0;
+}
+
+#page2{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    padding: 6vh 2vw;
+    background-color: rgb(255, 255, 255);
+}
+
+#page2 .elem{
+    height: 50%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    margin-bottom: 1vh;
+
+}
+
+    
 }
